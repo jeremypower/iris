@@ -1,6 +1,6 @@
 'use strict';
 
-const should = require('should');
+require('should');
 const request = require('supertest');
 const config = require('../../config');
 const service = require('../../server/service')(config);
@@ -20,10 +20,10 @@ describe('The express service', () => {
                 .put('/service/test/9999')
                 .expect(200)
                 .end((err, res) => {
-                if (err) return done(err);
-                res.body.result.should.startWith('test at');
-                return done();
-            });
+                    if (err) return done(err);
+                    res.body.result.should.startWith('test at');
+                    return done();
+                });
         });
     });
     
