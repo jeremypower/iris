@@ -17,6 +17,7 @@ module.exports = {
     witToken: process.env.WIT_TOKEN,
     slackToken: process.env.SLACK_TOKEN,
     slackLogLevel: 'vebose',
+    irisApiToken: process.env.IRIS_API_TOKEN,
     serviceTimeout: 30,
     log: (env) => {
         if(env) return log[env]();
